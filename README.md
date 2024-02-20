@@ -1,9 +1,9 @@
-# Ethic Hacking Utils.
+# Etik Hacking Yardımcı Programları.
 
-This repository have some utils scripts and documentations to use in ethic hacking.
+Bu depoda etik hacklemede kullanılacak bazı yardımcı komut dosyaları ve belgeler bulunur.
 
 ---------------
 
-# Files Order.
+# Dosya Sırası.
 
-The attacks is in the attacks directorie and you can identify for the directorie's name.
+Saldırılar, saldırılar dizinindedir ve dizinin adını tanımlayabilirsiniz.
